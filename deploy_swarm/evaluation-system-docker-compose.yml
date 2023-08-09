@@ -1,0 +1,14 @@
+version: "3"
+services:
+  mentor_evaluation_system:
+    ports:
+      - "2308:2308"
+    image: 35.201.214.194:5000/mentor_evaluation_system
+    deploy:
+      mode: replicated
+      replicas: 1
+    networks:
+      - mentor_server_backend_overlay
+networks:
+  mentor_server_backend_overlay:
+    driver: overlay

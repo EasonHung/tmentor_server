@@ -1,0 +1,18 @@
+version: "3"
+services:
+  mentor-user-system:
+    container_name: mentor-user-system
+    ports:
+      - "2306:2306"
+    build:
+      args:
+        mentor_env: develop
+      context: ./user_system
+      dockerfile: Dockerfile
+    command: ./main
+    restart: always
+    networks:
+      - backend-bridge
+networks:
+  backend-bridge:
+    driver: bridge

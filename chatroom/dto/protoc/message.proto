@@ -1,0 +1,16 @@
+syntax = "proto3";
+package dto;
+option go_package = "./;dto";
+
+message MessagePb {
+	string MessageId = 1;      
+	int32  Cmd = 2;     
+	string SenderId = 3;          
+	string RecieverId = 4;      
+	string ConversationId = 5;    
+	string Time = 6; 
+	string Message = 7;          
+	string Picture = 8;           
+	string Url = 9;
+	string SendId = 10;
+}
